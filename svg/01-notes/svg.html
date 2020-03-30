@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Front-End Fundamentals: SVG</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <header>
+      <h1>SVG</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>Vector Graphics</h2>
+
+        <ul>
+          <li>defined by points, lines, curves, shapes</li>
+          <li>can be scaled up with no loss of quality</li>
+          <li>ideal for logos, graphics, charts</li>
+          <li>edited using Illustrator</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Scalable Vector Graphics</h2>
+
+        <ul>
+          <li>vector graphics described in <abbr title="eXtensible Markup Language">XML</abbr></li>
+          <li>can be integrated in HTML</li>
+          <li>well supported in modern browsers</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>eXtensible Markup Language (XML)</h2>
+
+        <ul>
+          <li>rules for creating other markup languages (like HTML, SVG, etc.)</li>
+          <li>follows a strict syntax
+            <ul>
+              <li>element, attributes lowercase</li>
+              <li>elements must close</li>
+              <li>attributes must be double quoted</li>
+              <li>proper nesting is enforced</li>
+              <li>special characters must be encoded</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Using SVG on the Web</h2>
+
+        <ul>
+          <li>add using <code>&lt;img&gt;</code> tag</li>
+          <li>embed using <code>&lt;svg&gt;</code> tag</li>
+          <li>also recognized in css</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>Styling SVG</h2>
+
+        <ul>
+          <li>svg attributes</li>
+          <li>inline styles</li>
+          <li>using <code>&lt;style&gt;</code></li>
+          <li>external style sheets</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2>SVG Properties</h2>
+
+        <p>SVG is its own markup language so it has attributes (and values) unique to itself. When styling, you may be inclined to use HTML properties. Don't. They probably will not work.</p>
+
+        <p>Use <code>fill</code> instead of <code>color</code>; <code>stroke</code> instead of <code>border</code>.</p>
+
+        <p>See: <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute">SVG Attribute Reference</a></p>
+      </section>
+
+
+      <section>
+        <h2>SVG: Example</h2>
+        <img src="img/cat.svg" class="lg" alt="A large cat." />
+        <img src="img/cat.svg" class="md" alt="A normal-sized cat." />
+        <img src="img/cat.svg" class="sm" alt="A small cat." />
+        <img src="img/cat.svg" class="tiny" alt="A kitten." />
+      </section>
+
+
+      <section>
+        <h2>SVG Code</h2>
+
+        <p>Let's take a look at SVG code!</p>
+      </section>
+
+
+      <section>
+        <h2>SVG: Bonus Features</h2>
+
+        <ul>
+          <li>embedded raster images</li>
+          <li>clipping / masking</li>
+          <li>filter effects</li>
+          <li>define shapes for reuse</li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2><code>svg</code></h2>
+
+        <p>The <code>svg</code> element define where our vector graphics will be rendered.</p>
+
+        <p>It is necessary to define its dimensions.</p>
+
+        <p><code>&lt;svg width="600" height="300"&gt;&lt;/svg&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2><code>svg</code> coordinates</h2>
+
+        <ul>
+          <li>all drawing begins in the top, left corner</li>
+          <li>x-axis runs horizontally</li>
+          <li>y-axis runs vertically</li>
+        </ul>
+
+        <img src="img/svg-coordinates.svg" alt="SVG coordinates"/>
+      </section>
+
+
+      <section>
+        <h2><code>rect</code></h2>
+
+        <ul>
+          <li>draws a rectangle</li>
+          <li><code>x</code>, <code>y</code>: the starting point (top, left)</li>
+          <li><code>width</code>, <code>height</code>: dimensions</li>
+        </ul>
+
+        <p><code>&lt;rect x="20" y="10" width="100" height="50" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2><code>circle</code></h2>
+
+        <ul>
+          <li>draws a circle/ellipse</li>
+          <li><code>cx</code>, <code>cy</code> the starting point from the center</li>
+          <li><code>r</code>: radius</li>
+          <li><code>rx</code>, <code>ry</code>: radius for x-axis, y-axis (ellipse only)</li>
+        </ul>
+
+        <p><code>&lt;circle cx="200" cy="100" r="20" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2><code>line</code></h2>
+
+        <ul>
+          <li>draws a line</li>
+          <li><code>x1</code>, <code>y1</code>: starting point</li>
+          <li><code>x2</code>, <code>y2</code>: end point</li>
+          <li><code>stroke</code>: required to make line visible</li>
+        </ul>
+
+        <p><code>&lt;line x1="20" y1="20" x2="50" y2="50" stroke="black" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2><code>polyline</code> &amp; <code>polygon</code></h2>
+
+        <p>A <code>polyline</code> is a group of connected, straight lines. A <code>polygon</code> is similar, except the path returns to the first point, creating a closed shape.</p>
+
+        <pre>&lt;polyline points="60 110, 65 120, 70 115 ..." /&gt;<br/><br/>&lt;polygon points="50 160, 55 180, 70 180, 60 190 ..."/&gt;</pre>
+      </section>
+
+
+      <section>
+        <h2><code>path</code></h2>
+
+        <ul>
+          <li>draws crooked, curved lines</li>
+          <li><code>d</code> provides points along the path
+            <ul>
+              <li><code>M</code>: move to</li>
+              <li><code>L</code>: line to</li>
+              <li><code>Z</code>: close path</li>
+              <li><code>C</code>: curve</li>
+              <li><code>A</code>: arc</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><code>&lt;path d="M 13 100 L 60 50 L 90 90 L 140 30" /&gt;</code></p>
+      </section>
+
+
+      <section>
+        <h2><code>defs</code>, <code>symbol</code> and <code>use</code></h2>
+
+        <p><code>defs</code> defines reusable graphic objects (paths, shapes, gradients, etc.) for re-use <em>within an SVG</em>.</p>
+
+        <p><code>symbol</code> defines reusable graphic objects for re-use throughout the <em>document</em>.</p>
+
+        <p>In both cases, <code>use</code> is what calls that definition.</p>
+      </section>
+
+
+      <section>
+        <h2><code>symbol</code> Example</h2>
+
+        <pre>&lt;svg&gt;<br/>  &lt;symbol id="box" viewBox="0 0 50 50"&gt;<br/>    &lt;rect x="0" y="0" width="50" height="50" /&gt;<br/>  &lt;/symbol&gt;<br/>&lt;/svg&gt;<br/><br/>&lt;svg&gt;<br/>  &lt;use xlink:href="#box" /&gt;<br/>&lt;/svg&gt;</pre>
+      </section>
+
+
+      <section>
+        <h2><code>defs</code> Example</h2>
+
+        <pre>&lt;svg viewBox="0 0 50 50"&gt;&gt;<br/>  &lt;defs&gt;<br/>    &lt;circle cx="0" cy="0" r="5" id="circ" /&gt;<br/>  &lt;/defs&gt;<br/><br/>  &lt;use x="10" y="10" xlink:href="#circ" /&gt;<br/>&lt;/svg&gt;</pre>
+      </section>
+
+
+      <section>
+        <h2><code>g</code></h2>
+
+        <p>The <code>g</code> (grouping) element groups similar or related svg elements.</p>
+
+        <p>It is useful for structuring, applying styles to child elements and transforms (i.e. rotate, skew, etc.)</p>
+
+        <pre>&lt;svg width="100" height="100"&gt;<br/>  &lt;g&gt;<br/>    &lt;circle cx="50" cy="50" r="25" fill="red" /&gt;<br/>    &lt;circle cx="50" cy="50" r="20" fill="white"/&gt;<br/>    &lt;circle cx="50" cy="50" r="15" fill="red" /&gt;<br/>    &lt;circle cx="50" cy="50" r="10" fill="white"/&gt;<br/>    &lt;circle cx="50" cy="50" r="5" fill="red" /&gt;<br/>  &lt;/g&gt;<br/>&lt;/svg&gt;</pre>
+      </section>
+
+      <section>
+        <h2><code>text</code></h2>
+
+        <p>The <code>text</code> element draws a graphic element which contains text.</p>
+
+        <pre>&lt;text x="5" y="12"&gt;Hello&lt;/text&gt;</pre>
+      </section>
+
+
+
+    </main>
+  </body>
+</html>

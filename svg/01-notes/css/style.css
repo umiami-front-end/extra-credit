@@ -1,0 +1,130 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  color: #222;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: rgb(20,61,142);
+}
+
+a:visited {
+  color: rgb(88,40,130);
+}
+
+a:hover {
+  color: rgb(255,84,0);
+}
+
+ins {
+  text-decoration: none;
+  font-style: italic;
+}
+
+blockquote {
+  background-color: #eee;
+  font-style: italic;
+  margin: 0;
+  padding: 0.5rem;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+blockquote p:last-child {
+  text-align: right;
+}
+
+header {
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+header h1,
+header h2 {
+  margin: 0;
+}
+
+main, footer {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+section {
+  margin-bottom: 4rem;
+  border: 1px solid #ccc;
+  padding: 2rem;
+  padding-bottom: 1rem;
+}
+
+section > h2 {
+  margin-top: 0;
+}
+
+section > img {
+  width: 100%;
+  height: auto;
+}
+
+pre,
+code {
+  background-color: #ddd;
+  padding: 2px;
+}
+
+span {
+  color: #777;
+}
+
+table {
+  width: 50%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-collapse: collapse;
+}
+
+th, td {
+  width: 50%;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+.xl {
+  width: 400px;
+}
+
+.lg {
+  width: 200px;
+}
+
+.md {
+  width: 100px;
+}
+
+.sm {
+  width: 50px;
+}
+
+.tiny {
+  width: 20px;
+}
+
+.align {
+  vertical-align: middle;
+}
+
+.emoji {
+  font-size: 72px;
+  margin: 0;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
