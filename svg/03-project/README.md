@@ -4,7 +4,9 @@
 
 DUE: Monday, April 27, 2020, Noon.
 
-A maximum of **fifteen (5) bonus points** can be earned.
+~~A maximum of **fifteen (5) bonus points** can be earned.~~
+
+(**Update (Apr. 26):** Error on my part because the above makes no sense! As noted below, one point per flag, so the max is six (6) points -- not 15!)
 
 Points will be applied to the area of your grade which needs it most.
 
